@@ -263,9 +263,8 @@ class ramzy():
 
     def inv(self):
         self.re_wave=[librosa.istft(i,hop_length=512,win_length=2048,window='hann') for i in self.re_spec]
-        librosa.output.write_wav('C:\\Users\\a\\PycharmProjects\\midi\\oo\\a.wav',self.re_wave[0],sr=44100)
-        librosa.output.write_wav('C:\\Users\\a\\PycharmProjects\\midi\\oo\\b.wav',self.re_wave[1],sr=44100)
         path=input('name a folder to save outcomes')
+        path=''.join([path,'\\'])
         print(self.re_wave)
         for i in range(len(self.re_wave)):
             print(i)
